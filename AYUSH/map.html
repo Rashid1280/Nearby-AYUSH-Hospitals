@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+    <link rel="stylesheet" href="styleSheet.css">
+    <style>
+        #map-div {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #map {
+            position: absolute;
+            top: 100px;
+            left: 350px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        h2 {
+            color: white;
+            font-family: 'Rubik Moonrocks', cursive;
+            position: absolute;
+            left: 350px;
+            top: 10px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map-div">
+        <img src="/IMG/logo.png" height="100px" alt="">
+        <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1MIHDSAHQcLaSS9sGL9ZWLQshm17RQoQ&ehbc=2E312F"
+            width="900px" height="600px"></iframe>
+        <h2>AYUSH Hospitals nearby you, are embedded on the map below.</h2>
+    </div>
+</body>
+
+</html>
