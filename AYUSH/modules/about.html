@@ -1,83 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abouut us</title>
+    <title>AYUSH - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: lawngreen;
+            font-family: 'Roboto', sans-serif; /* A more professional font for consistency */
+            color: #333;
+            background-color: #f8f9fa; /* Light background for the page */
         }
-
-        .first {
-            font-size: larger;
-            font-family: 'Rubik Moonrocks', cursive;
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23667eea" width="1200" height="800"/><circle cx="200" cy="200" r="100" fill="%23764ba2" opacity="0.3"/><circle cx="800" cy="400" r="150" fill="%23f093fb" opacity="0.3"/></svg>');
+            background-size: cover;
+            min-height: 40vh; /* Shorter hero for internal pages */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
         }
-
-        .logo {
-            height: 0px;
+        .section-padding {
+            padding: 80px 0;
+        }
+        .bg-light-blue {
+            background-color: #e3f2fd; /* A light, calming blue */
+        }
+        .text-primary-dark {
+            color: #4a5c9a; /* A slightly darker primary for headings */
+        }
+        .btn-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+        }
+        .img-fluid-rounded {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
     </style>
 </head>
-
 <body>
-    <div class="logo">
-        <a href="/index.html"><img src="/IMG/logo.png" alt="" height="600px"></a>
-    </div>
-    <div class="first">
-        <p>AYUSH is the acronym of the medical systems that are being practiced in India
-            such as Ayurveda, Yoga & Naturopathy, Unani, Siddha and Homeopathy. These systems
-            are based on definite medical philosophies and represent a way of healthy living with
-            established conceptson prevention of diseases and promotion of health. The basic approach
-            of all these systems on health, disease and treatment are holistic. Because of this, there
-            is a resurgence of intereston AYUSH systems. Yoga has now become the icon of global
-            health and many countries havestarted integrating it in their health care delivery system.
-            Similarly there is great curiosity to understand the principles and practice of Ayurveda,
-            Homeopathy, Siddha and Unani especiallydue to growing challenges in medicine in Non
-            Communicable Diseases (NCDs), Life style disorders, long term diseases, multi drug
-            resistant diseases, emergence of new diseases etc. In 1995, with the objective of optimal
-            and focused development of these systems, the Department of Indian Medicine and
-            Homeopathy (ISM & H) was created in the Union Ministry of Health and Family Welfare.
-            In 2003, this Department was re named as Department of AYUSH.
-        </p>
-    </div>
-    <div class="first">
-        <p>
-            India has a rich heritage of medical wisdom conserved as traditional healthcare systems.
-            These were the principal medical practices of the country for centuries, forming part of
-            Indian ethos and culture. Traditional medicine is defined as bringing together of
-            knowledge, skill, and practices based on theories, beliefs, and experiences indigenous to
-            different cultures, whether explicable or not, used for therapeutic, restorative, prevention,
-            diagnosis and maintenance of physical and mental health . Traditional Medicine continues
-            to be widely used in most countries, and its uptake is increasing rapidly in other countries.
-            In India, Traditional Medicine is popular as Indian System of Medicine (ISM&H), It is the
-            culmination of Indian thought of medicine which represents a way of healthy living valued
-            with a long and unique cultural history, as also amalgamating the best of influences that
-            came in from contact with other civilizations be it Greece (resulting in Unani Medicine) or
-            Germany (Homeopathy) or our scriptures/sages which gave us the science of Ayurveda,
-            Siddha and also Yoga & Naturopathy. These systems are based on definite medical
-            philosophies and represent a way of healthy living with established concepts on prevention
-            of disease and promotion of health. The basic approach of all these systems on health,
-            disease and treatment are holistic. Because of this, there is a resurgence of interest on
-            AYUSH systems.
-        </p>
-    </div>
-    <div class="first">
-        <p>
-            The object of this project is to provide information about Ayush ministry so that the people
-            will be aware about Ayurveda and ayurvedic hospitals and to provide a list of Ayush hospitals
-            with their locations usinggoogle Map API so that user can easily find the nearby hospitals.
-            Users will be also provided with the details about the hospitals which are as follows: Opening
-            time and Closing time and Contact information like- contact number & Email address. So
-            thatthe users can get the best treatment.
-        </p>
-        <a href="https://www.ayush.gov.in/" target="_blank">
-            <h4 style="color: black;">https://www.ayush.gov.in/</h4>
-        </a>
-        <img src="/ayush.png" alt="">
-    </div>
-</body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="/AYUSH/index.html">
+                <i class="fas fa-leaf me-2"></i>AYUSH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AYUSH/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AYUSH/modules/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AYUSH/modules/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AYUSH/map.html">Find Hospitals</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section for About Page -->
+    <section class="hero-bg">
+        <div class="container">
+            <h1 class="display-3 fw-bold">About AYUSH</h1>
+            <p class="lead mt-3">Understanding India's rich heritage of traditional medicine systems.</p>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <h2 class="display-5 fw-bold text-center text-primary-dark mb-4">What is AYUSH?</h2>
+                    <p class="lead text-center text-muted">
+                        AYUSH is the acronym of the medical systems that are being practiced in India such as Ayurveda, Yoga & Naturopathy, Unani, Siddha and Homeopathy. These systems are based on definite medical philosophies and represent a way of healthy living with established concepts on prevention of diseases and promotion of health.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/AYUSH/IMG/ayurveda.jpg" alt="Traditional Indian Medicine" class="img-fluid img-fluid-rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold text-primary-dark mb-3">A Legacy of Wellness</h3>
+                    <p class="fs-5">
+                        The basic approach of all these systems on health, disease and treatment are holistic. Because of this, there is a resurgence of interest on AYUSH systems. Yoga has now become the icon of global health and many countries have started integrating it in their health care delivery system. Similarly there is great curiosity to understand the principles and practice of Ayurveda, Homeopathy, Siddha and Unani especially due to growing challenges in medicine in Non Communicable Diseases (NCDs), Life style disorders, long term diseases, multi drug resistant diseases, emergence of new diseases etc.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/AYUSH/IMG/yoga.jpg" alt="Holistic Healing" class="img-fluid img-fluid-rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold text-primary-dark ">The Evolution of AYUSH</h3>
+                    <p class="fs-5">
+                        In 1995, with the objective of optimal and focused development of these systems, the Department of Indian Medicine and Homeopathy (ISM & H) was created in the Union Ministry of Health and Family Welfare. In 2003, this Department was re-named as Department of AYUSH. India has a rich heritage of medical wisdom conserved as traditional healthcare systems. These were the principal medical practices of the country for centuries, forming part of Indian ethos and culture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" bg-light-blue text-center pb-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-primary-dark mb-4">Our Mission</h2>
+            <p class="lead mb-4 mx-auto" style="max-width: 800px;">
+                The object of this project is to provide information about the AYUSH ministry so that people will be aware of Ayurveda and ayurvedic hospitals and to provide a list of AYUSH hospitals with their locations using Google Map API so that users can easily find nearby hospitals. Users will also be provided with details about the hospitals which are as follows: Opening time and Closing time and Contact information like- contact number & Email address. So that the users can get the best treatment.
+            </p>
+            <a href="https://www.ayush.gov.in/" target="_blank" class="btn btn-gradient btn-lg text-white mt-3">
+                <i class="fas fa-external-link-alt me-2"></i>Visit AYUSH Ministry Official Site
+            </a>
+            <div class="mt-4">
+                
+                <img src="/AYUSH/ayush.png" alt="AYUSH Logo" class="img-fluid" style="max-height: 150px; border-radius: 5px; background-color: #333;">
+            </div>
+            <a href="/AYUSH/index.html" class="btn btn-outline-dark btn-lg mt-4">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </a>
+        </div>
+    </section>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

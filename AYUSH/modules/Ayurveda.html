@@ -1,144 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYURVEDA</title>
+    <title>AYUSH - Ayurveda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            /* background-image: url("/IMG/ayurveda.jpg") ;
-            background-repeat: no-repeat;
-            background-size:cover; */
-            background-color: black;
-
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
         }
-
-        #img {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-            opacity: 0.5;
-            position: fixed;
-        }
-
-        h1 {
-            position: absolute;
-            top: 10px;
-            left: 600px;
+        .hero-bg {
+            /* Replace with your actual image path: url('/IMG/ayurveda.jpg') */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x400/667eea/ffffff?text=Ayurveda');
+            background-size: cover;
+            background-position: center;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            font-family: 'Rubik Moonrocks', cursive;
+            text-align: center;
         }
-
-        .content {
-            position: absolute;
-            top: 80px;
-            left: 50px;
+        .section-padding {
+            padding: 80px 0;
+        }
+        .text-primary-dark {
+            color: #4a5c9a;
+        }
+        .btn-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+        }
+        /* Custom styling for the simplified footer */
+        .simplified-footer {
+            background-color: #343a40;
             color: white;
-            font-family: 'Rubik Moonrocks', cursive;
-            font-size: larger;
+            padding: 30px 0;
+            text-align: center;
         }
-
-        h4 {
-            color: white;
+        .simplified-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
         }
-
-        h4:hover {
+        .simplified-footer a:hover {
+            color: #f0f0f0;
             text-decoration: underline;
+        }
+        .content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .content h2, .content h3 {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <img id="img" src="/IMG/ayurveda.jpg" alt="">
-        <h1>AYURVEDA</h1>
-        <div class="content">
-            <p>Ayurveda, a natural system of medicine, originated in India more than 3,000 years ago. The term Ayurveda
-                is derived from the Sanskrit words ayur (life) and veda (science or knowledge). Thus, Ayurveda
-                translates to knowledge of life. Based on the idea that disease is due to an imbalance or stress in a
-                person's consciousness, Ayurveda encourages certain lifestyle interventions and natural therapies to
-                regain a balance between the body, mind, spirit, and the environment.
-
-                Ayurveda treatment starts with an internal purification process, followed by a special diet, herbal
-                remedies, massage therapy, yoga, and meditation.
-
-                The concepts of universal interconnectedness, the body's constitution (prakriti), and life forces
-                (doshas) are the primary basis of ayurvedic medicine. Goals of treatment aid the person by eliminating
-                impurities, reducing symptoms, increasing resistance to disease, reducing worry, and increasing harmony
-                in life. Herbs and other plants, including oils and common spices, are used extensively in Ayurvedic
-                treatment. </p>
-
-            <p> In India, Ayurveda is considered a form of medical care, equal to conventional Western medicine,
-                traditional Chinese medicine, naturopathic medicine, and homeopathic medicine. Practitioners of Ayurveda
-                in India undergo state-recognized, institutionalized training. Currently, Ayurvedic practitioners are
-                not licensed in the United States, and there is no national standard for Ayurvedic training or
-                certification. However, Ayurvedic schools have gained approval as educational institutions in some
-                states.
-
-                Ayurveda can have positive effects when used as a complementary therapy in combination with standard,
-                conventional medical care.
-
-                Many Ayurvedic materials have not been thoroughly studied in either Western or Indian research. Some of
-                the products used in Ayurvedic medicine contain herbs, metals, minerals, or other materials that may be
-                harmful if used improperly or without the direction of a trained practitioner. Ayurvedic medicines are
-                regulated as dietary supplements rather than as drugs in the United States, so they are not required to
-                meet the safety and efficacy standards for conventional medicines. These medicines can interact, or work
-                against, the effects of Western medicines. Investigate the training and background of Ayurvedic
-                practitioners whom you intend to use.</p>
-
-            <p> It's important to discuss any Ayurvedic treatments that you use with your doctor. Women who are pregnant
-                or nursing, or people who are thinking of using Ayurvedic therapy to treat a child, should consult their
-                healthcare provider. It is important to make sure that any diagnosis of a disease or condition has been
-                made by a healthcare provider who has substantial conventional medical training and experience with
-                managing that disease or condition. While Ayurveda can have positive effects when used as a
-                complementary therapy in combination with standard, conventional medical care, it should not replace
-                standard, conventional medical care, especially when treating serious conditions. </p>
-            <p>
-            <h2>What Is Ayurvedic Medicine?</h2>
-            The ancient Indian medical system, also known as Ayurveda, is based on ancient writings that rely on a
-            “natural” and holistic approach to physical and mental health. Ayurvedic medicine is one of the world’s
-            oldest medical systems and remains one of India’s traditional health care systems. Ayurvedic treatment
-            combines products (mainly derived from plants, but may also include animal, metal, and mineral), diet,
-            exercise, and lifestyle.</p>
-            <p>
-            <h2>What the Science Says About the Effectiveness of Ayurvedic Medicine</h2>
-            Few well-designed clinical trials and systematic research reviews suggest that Ayurvedic approaches are
-            effective.
-
-            Results from a 2013 clinical trial compared two Ayurvedic formulations of plant extracts against the natural
-            product glucosamine sulfate and the drug celecoxib in 440 people with knee osteoarthritis. All four products
-            provided similar reductions in pain and improvements in function.
-
-            A preliminary and small NCCIH-funded 2011 pilot study with 43 people found that conventional and Ayurvedic
-            treatments for rheumatoid arthritis were similarly effective. The conventional drug tested was methotrexate
-            and the Ayurvedic treatment included 40 herbal compounds.
-            Outcomes from a small short-term clinical trial with 89 men and women suggested that a formulation of five
-            Ayurvedic herbs may help people with type 2 diabetes. However, other researchers said inadequate study
-            designs haven’t allowed researchers to develop firm conclusions about Ayurveda for diabetes.
-            Turmeric, an herb often used in Ayurvedic preparations, may help with ulcerative colitis, but the two
-            studies reporting this were small—one, published in 2005, included 10 people while the other, published in
-            2006, had 89.</p>
-            <p>
-            <h2>What the Science Says About the Safety of Ayurvedic Medicine</h2>
-            Some Ayurvedic preparations include metals, minerals, or gems. The U.S. Food and Drug Administration warns
-            that the presence of metals in some Ayurvedic products makes them potentially harmful.
-            A 2015 published survey of people who use Ayurvedic preparations showed that 40 percent had elevated blood
-            levels of lead and some had elevated blood levels of mercury. About one in four of the supplements tested
-            had high levels of lead and almost half of them had high levels of mercury.
-            A 2015 case report published in the Center for Disease Control’s Morbidity and Mortality Weekly Report
-            linked elevated blood lead levels in a 64-year-old woman with Ayurvedic preparations purchased on the
-            Internet.
-            Although rare, Ayurvedic products may cause arsenic poisoning.</p>
-            <h3>TO SPREAD AWARENESS ABOUT THE TRADITIONAL TREATMENT OF AYUSH, EXLPORE AYUSH MINISTRY THROUGH THE LINK
-            </h3>
-            <a href="https://www.ayush.gov.in/" target="_blank">
-                <h4>https://www.ayush.gov.in/</h4>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="/index.html">
+                <!-- <img src="/IMG/logo.png" alt="AYUSH Logo" style="height: 40px;" class="me-2"> -->
+                <i class="fas fa-leaf me-2"></i>AYUSH
             </a>
-            <img src="/ayush.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/map.html">Find Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/modules/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/modules/Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</body>
+    </nav>
 
+    <!-- Hero Section for Ayurveda Page -->
+    <section class="hero-bg">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Ayurveda</h1>
+            <p class="lead mt-3">The ancient science of life and holistic healing.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p>Ayurveda, a natural system of medicine, originated in India more than 3,000 years ago. The term Ayurveda is derived from the Sanskrit words ayur (life) and veda (science or knowledge). Thus, Ayurveda translates to knowledge of life. Based on the idea that disease is due to an imbalance or stress in a person's consciousness, Ayurveda encourages certain lifestyle interventions and natural therapies to regain a balance between the body, mind, spirit, and the environment.</p>
+
+                    <p>Ayurveda treatment starts with an internal purification process, followed by a special diet, herbal remedies, massage therapy, yoga, and meditation.</p>
+
+                    <p>The concepts of universal interconnectedness, the body's constitution (prakriti), and life forces (doshas) are the primary basis of ayurvedic medicine. Goals of treatment aid the person by eliminating impurities, reducing symptoms, increasing resistance to disease, reducing worry, and increasing harmony in life. Herbs and other plants, including oils and common spices, are used extensively in Ayurvedic treatment.</p>
+
+                    <p>In India, Ayurveda is considered a form of medical care, equal to conventional Western medicine, traditional Chinese medicine, naturopathic medicine, and homeopathic medicine. Practitioners of Ayurveda in India undergo state-recognized, institutionalized training. Currently, Ayurvedic practitioners are not licensed in the United States, and there is no national standard for Ayurvedic training or certification. However, Ayurvedic schools have gained approval as educational institutions in some states.</p>
+
+                    <p>Ayurveda can have positive effects when used as a complementary therapy in combination with standard, conventional medical care.</p>
+
+                    <p>Many Ayurvedic materials have not been thoroughly studied in either Western or Indian research. Some of the products used in Ayurvedic medicine contain herbs, metals, minerals, or other materials that may be harmful if used improperly or without the direction of a trained practitioner. Ayurvedic medicines are regulated as dietary supplements rather than as drugs in the United States, so they are not required to meet the safety and efficacy standards for conventional medicines. These medicines can interact, or work against, the effects of Western medicines. Investigate the training and background of Ayurvedic practitioners whom you intend to use.</p>
+
+                    <p>It's important to discuss any Ayurvedic treatments that you use with your doctor. Women who are pregnant or nursing, or people who are thinking of using Ayurvedic therapy to treat a child, should consult their healthcare provider. It is important to make sure that any diagnosis of a disease or condition has been made by a healthcare provider who has substantial conventional medical training and experience with managing that disease or condition. While Ayurveda can have positive effects when used as a complementary therapy in combination with standard, conventional medical care, it should not replace standard, conventional medical care, especially when treating serious conditions.</p>
+                    
+                    <h2 class="text-primary-dark">What Is Ayurvedic Medicine?</h2>
+                    <p>The ancient Indian medical system, also known as Ayurveda, is based on ancient writings that rely on a “natural” and holistic approach to physical and mental health. Ayurvedic medicine is one of the world’s oldest medical systems and remains one of India’s traditional health care systems. Ayurvedic treatment combines products (mainly derived from plants, but may also include animal, metal, and mineral), diet, exercise, and lifestyle.</p>
+                    
+                    <h2 class="text-primary-dark">What the Science Says About the Effectiveness of Ayurvedic Medicine</h2>
+                    <p>Few well-designed clinical trials and systematic research reviews suggest that Ayurvedic approaches are effective.</p>
+
+                    <p>Results from a 2013 clinical trial compared two Ayurvedic formulations of plant extracts against the natural product glucosamine sulfate and the drug celecoxib in 440 people with knee osteoarthritis. All four products provided similar reductions in pain and improvements in function.</p>
+
+                    <p>A preliminary and small NCCIH-funded 2011 pilot study with 43 people found that conventional and Ayurvedic treatments for rheumatoid arthritis were similarly effective. The conventional drug tested was methotrexate and the Ayurvedic treatment included 40 herbal compounds. Outcomes from a small short-term clinical trial with 89 men and women suggested that a formulation of five Ayurvedic herbs may help people with type 2 diabetes. However, other researchers said inadequate study designs haven’t allowed researchers to develop firm conclusions about Ayurveda for diabetes. Turmeric, an herb often used in Ayurvedic preparations, may help with ulcerative colitis, but the two studies reporting this were small—one, published in 2005, included 10 people while the other, published in 2006, had 89.</p>
+                    
+                    <h2 class="text-primary-dark">What the Science Says About the Safety of Ayurvedic Medicine</h2>
+                    <p>Some Ayurvedic preparations include metals, minerals, or gems. The U.S. Food and Drug Administration warns that the presence of metals in some Ayurvedic products makes them potentially harmful.</p>
+                    <p>A 2015 published survey of people who use Ayurvedic preparations showed that 40 percent had elevated blood levels of lead and some had elevated blood levels of mercury. About one in four of the supplements tested had high levels of lead and almost half of them had high levels of mercury. A 2015 case report published in the Center for Disease Control’s Morbidity and Mortality Weekly Report linked elevated blood lead levels in a 64-year-old woman with Ayurvedic preparations purchased on the Internet. Although rare, Ayurvedic products may cause arsenic poisoning.</p>
+
+                    <h3 class="mt-5">TO SPREAD AWARENESS ABOUT THE TRADITIONAL TREATMENT OF AYUSH, EXPLORE AYUSH MINISTRY THROUGH THE LINK</h3>
+                    <a href="https://www.ayush.gov.in/" target="_blank" class="text-decoration-none">
+                        <h4 class="text-primary-dark">https://www.ayush.gov.in/</h4>
+                    </a>
+                    <div class="mt-4">
+          
+                        <img src="/AYUSH/IMG/ayurveda.jpg" alt="AYUSH Logo" class="img-fluid" style="max-height: 150px; border-radius: 5px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simplified Footer -->
+    <footer class="simplified-footer">
+        <div class="container">
+            <a href="/index.html" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </a>
+            <p class="mb-0 mt-3 text-light">&copy; 2024 AYUSH Hospital Finder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

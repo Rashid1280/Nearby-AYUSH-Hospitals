@@ -1,115 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AYUSH</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="styleSheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYUSH - Find Nearby Alternative Medicine Hospitals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23667eea" width="1200" height="800"/><circle cx="200" cy="200" r="100" fill="%23764ba2" opacity="0.3"/><circle cx="800" cy="400" r="150" fill="%23f093fb" opacity="0.3"/></svg>');
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+        }
+    </style>
 </head>
-
 <body>
-
-
-  <div class="bodyContain">
-    <!-- <img src="/IMG/home.jpg" alt="" class="backImg"> -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="\IMG\logo.png" alt="" width="75"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/modules/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/modules/Contact.html">Contact Us</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li> -->
-          </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="/AYUSH/index.html">
+                <i class="fas fa-leaf me-2"></i>AYUSH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AYUSH/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="modules/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="modules/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Find Hospitals</a>
+                    </li>
+                    
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-          aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-          aria-label="Slide 5"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="/modules/Ayurveda.html">
-            <img src="/IMG/ayurveda.jpg" class="d-block w-100 h-100" alt="...">
-          </a>
-          <div class="ayurveda">AYURVEDA</div>
-        </div>
-        <div class="carousel-item">
-          <a href="/modules/Yoga.html">
-            <img src="/IMG/yoga.jpg" class="d-block w-100 h-100" alt="...">
-          </a>
-          <div class="yoga">YOGA</div>
-        </div>
-        <div class="carousel-item">
-          <a href="/modules/Unani.html">
-            <img src="/IMG/unani.jpg" class="d-block w-100 h-100" alt="...">
-          </a>
-          <div class="unani">UNANI</div>
-        </div>
-        <div class="carousel-item">
-          <a href="/modules/Siddha.html">
-            <img src="/IMG/siddha.jpg" class="d-block w-100 h-100" alt="...">
-          </a>
-          <div class="siddha">SIDDHA</div>
-        </div>
-        <div class="carousel-item">
-          <a href="/modules/Homeopathy.html">
-            <img src="/IMG/homeopathy.jpg" class="d-block w-100 h-100" alt="...">
-          </a>
-          <div class="homeopathy">HOMEOPATHY</div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
 
-  <div class="map">
-    <span>Find nearby AYUSH hospitals ===></span>
-    <a class="map-img" href="map.html"><img src="/IMG/map.png" alt="" height="100px"></a>
-  </div>
-<!-- mkvn -->
-  <!-- <div class="container-fluid" id="home">
-      <img src="/IMG/home.jpg" alt="This an image"  width="100%">
-    </div> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center text-center text-white">
+                <div class="col-lg-8">
+                    <h1 class="display-2 fw-bold mb-4">Find AYUSH Hospitals Near You</h1>
+                    <p class="lead mb-5 fs-4">
+                        Discover nearby hospitals specializing in Ayurveda, Yoga, Unani, Siddha, and Homeopathy. 
+                        Your journey to holistic healing starts here.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="map.html" class="btn btn-gradient btn-lg text-white px-4">
+                            <i class="fas fa-map-marker-alt me-2"></i>Find Hospitals
+                        </a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-4 fw-bold text-primary mb-3">AYUSH Medical Systems</h2>
+                    <p class="lead text-muted">Explore traditional Indian medicine systems</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-leaf text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Ayurveda</h4>
+                            <p class="card-text text-muted">Ancient Indian system of medicine focusing on natural healing through herbs, diet, and lifestyle.</p>
+                            <a href="/AYUSH/modules/Ayurveda.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-meditation text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Yoga & Naturopathy</h4>
+                            <p class="card-text text-muted">Holistic approach combining physical postures, breathing techniques, and natural healing methods.</p>
+                            <a href="/AYUSH/modules/Yoga.html" class="btn btn-outline-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-mortar-pestle text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Unani</h4>
+                            <p class="card-text text-muted">Traditional medicine system based on Greek philosophy, using natural remedies and balanced lifestyle.</p>
+                            <a href="/AYUSH/modules/Unani.html" class="btn btn-outline-info">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-spa text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Siddha</h4>
+                            <p class="card-text text-muted">Ancient Tamil system of medicine emphasizing prevention and treatment through natural substances.</p>
+                            <a href="/AYUSH/modules/Siddha.html" class="btn btn-outline-warning">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-pills text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Homeopathy</h4>
+                            <p class="card-text text-muted">Gentle healing system using highly diluted substances to trigger the body's natural healing response.</p>
+                            <a href="/AYUSH/modules/Homeopathy.html" class="btn btn-outline-danger">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact" class="py-5 bg-secondary text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3">AYUSH Hospital Finder</h5>
+                    <p class="text-light">Your trusted platform for finding alternative medicine hospitals across India.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3">Medical Systems</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/modules/Ayurveda.html" class="text-light text-decoration-none">Ayurveda</a></li>
+                        <li><a href="/modules/Yoga.html" class="text-light text-decoration-none">Yoga & Naturopathy</a></li>
+                        <li><a href="/modules/Unani.html" class="text-light text-decoration-none">Unani</a></li>
+                        <li><a href="/modules/Siddha.html" class="text-light text-decoration-none">Siddha</a></li>
+                        <li><a href="/modules/Homeopathy.html" class="text-light text-decoration-none">Homeopathy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact Info</h5>
+                    <p class="text-light mb-2">
+                        <i class="fas fa-envelope me-2"></i>info@ayushhospitals.com
+                    </p>
+                    <p class="text-light mb-2">
+                        <i class="fas fa-phone me-2"></i>+91 1234 567 890
+                    </p>
+                    <p class="text-light">
+                        <i class="fas fa-map-marker-alt me-2"></i>Raipur, India
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
