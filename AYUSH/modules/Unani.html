@@ -1,175 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNANI</title>
-    <style>
-        body {
-            /* background-image: url("/IMG/ayurveda.jpg") ;
-            background-repeat: no-repeat;
-            background-size:cover; */
-            background-color: black;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AYUSH - Unani</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --primary-dark: #4a5c9a;
+      --muted-bg: #f8f9fa;
+      --hero-overlay: rgba(0,0,0,0.55);
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+      color: #222;
+      background: var(--muted-bg);
+      -webkit-font-smoothing:antialiased;
+    }
 
-        }
+    /* Hero */
+    .hero {
+      min-height: 42vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      text-align:center;
+      background:
+        linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+        url('/IMG/unani.jpg') center/cover no-repeat;
+    }
 
-        #img {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-            opacity: 0.5;
-            position: fixed;
-        }
+    .hero .title {
+      font-size: clamp(1.6rem, 3.6vw, 3rem);
+      font-weight:700;
+      letter-spacing: .6px;
+    }
+    .hero .sub { font-size:1.05rem; opacity:.95; margin-top:.5rem; }
 
-        h1 {
-            position: absolute;
-            top: 10px;
-            left: 600px;
-            color: white;
-            font-family: 'Rubik Moonrocks', cursive;
-        }
+    .section-padding { padding:70px 0; }
 
-        .content {
-            position: absolute;
-            top: 80px;
-            left: 50px;
-            color: white;
-            font-family: 'Rubik Moonrocks', cursive;
-            font-size: larger;
-        }
+    .text-primary-dark { color: var(--primary-dark); }
 
-        h4 {
-            color: white;
-        }
+    /* content */
+    .content p { line-height:1.75; margin-bottom:1rem; }
+    .content h2, .content h3 { margin-top:2rem; margin-bottom:1rem; }
 
-        h4:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* cards & did-you-know */
+    .fact-box {
+      background: linear-gradient(180deg,#fff,#f7fafe);
+      border-left:4px solid var(--primary-dark);
+      padding:16px;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(46,61,73,0.06);
+    }
+
+    .gallery {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:12px;
+    }
+    .gallery .thumb {
+      flex: 1 1 220px;
+      max-width:330px;
+      overflow:hidden;
+      border-radius:8px;
+      background:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .gallery img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* footer */
+    .simplified-footer {
+      background:#343a40;
+      color:#fff;
+      padding:28px 0;
+      text-align:center;
+    }
+    .simplified-footer a { color:#fff; text-decoration:none; font-weight:600; }
+    .simplified-footer a:hover { text-decoration:underline; }
+
+    /* small screens */
+    @media (max-width:576px){
+      .hero { padding: 48px 12px; }
+      .gallery .thumb { flex-basis: 48%; }
+    }
+  </style>
 </head>
-
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <img id="img" src="/IMG/unani.jpg" alt="">
-        <h1>UNANI</h1>
-        <div class="content">
-            <p>Unani medicine, also called Unani tibb, Arabian medicine, or Islamic medicine, a traditional system of
-                healing and health maintenance observed in South Asia. The origins of Unani medicine are found in the
-                doctrines of the ancient Greek physicians Hippocrates and Galen. As a field, it was later developed and
-                refined through systematic experiment by the Arabs, most prominently by Muslim scholar-physician
-                Avicenna. During the Caliphate (the political-religious Muslim state that began in 632 CE), the bulk of
-                Greek knowledge was translated into Arabic, part of that knowledge being the principles of medicine.
-                With additional contributions of medical wisdom from other parts of the Middle East and South Asia,
-                Unani medicine came to be known also as Arabian, or Islamic, medicine.</p>
+      <a class="navbar-brand fs-4 fw-bold" href="/AYUSH/index.html">
+        <i class="fas fa-leaf me-2"></i>AYUSH
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <p>
-            <h2>Modes of treatment</h2>
-            The initial approach to treatment in the Unani system entails the establishment of a regimen to normalize
-            and balance the external factors (e.g., air, water, and food) involved in ailments and diseases. If this
-            proves inadequate, then other means, such as treatment with natural medicines, may be recommended. Any Unani
-            treatment prescribed by a hakim acts as an outside agent to help boost the patient’s tabiyat and thus
-            restore good health and a sense of well-being.
-
-            There are various therapeutic approaches available to the hakim. Ilaj-bi-ghiza, or dietotherapy, involves
-            recommending a specific diet, which is the simplest and most natural course of treatment by a hakim. For
-            fever, for example, Unani medicine stresses a nutrient-rich, low-roughage diet that might include dalia
-            (porridge) and kheer (a milk broth). Both the amount and quality of food are taken into consideration.
-            Relatively infrequent in modern Unani therapy is ilaj-bi-misla, or organotherapy, a mode of treatment that
-            involves healing a diseased organ with the use of tissue extracts from the same organ of a healthy animal.
-            Ilaj-bi-dawa, or pharmacotherapy, is the use of medicines by Unani hakims. This treatment method is
-            considered by hakims to be natural, eco-friendly, and less intrusive and more effective than many other
-            methods. The Unani system’s pharmacopoeia is vast, enriched with more than 2,000 medicines derived from
-            various herbal, mineral, and animal sources.</p>
-
-            <p>Unani medications are often processed by classical methods of preparation as originally described in
-                Greco-Arabic medicine. Unani medicines are used singly or are compounded with other substances to
-                achieve synergistic, antagonistic, or detoxifying effects or simply as bases for effective ingestion and
-                assimilation.
-
-                In the 1920s Indian physician Ajmal Khan revolutionized Unani medicine by advocating that research be
-                conducted on various natural products that were claimed by ancient physicians to effect miraculous
-                cures. In the 1930s Indian-born scientist Salimuzzaman Siddiqui, who specialized in phytochemistry (the
-                chemistry of plants), isolated potent constituents from a plant known in India as chhota chand
-                (Rauwolfia serpentina). Subsequent pharmacological research determined that the plant was the source of
-                a bioactive substance known as reserpine, which found use in Western medicine as a tranquilizer and as
-                an antihypertensive agent (lowering abnormally high blood pressure). Those uses supported some of the
-                medical applications that had been described by hakims. Siddiqui named the derived medicines, which
-                included ajmaline and ajmalicine, for Khan as a tribute to his groundbreaking research efforts.
-
-                Having gained recognition from the World Health Organization (WHO) in 1976, the Unani system became
-                increasingly accepted internationally as a system of traditional medicine. In India several institutions
-                engaged in Unani teaching and research. The Central Council for Research in Unani Medicine (CCRUM), an
-                undertaking of the Indian government, for instance, facilitated the translation of classical heritage,
-                the organization of clinical trials, the improvement of drug standardization, and the investigation of
-                toxicological and phytopharmacological properties of natural products that had long been used by hakims.
-            </p>
-
-            <p>Classical Unani medicine recommended established “regimental” therapies (tadabeer) in the treatment of
-                various chronic and acute diseases. Those therapies include dalak (massage), hammam (bath and sauna),
-                karat (exercise), fasd (venesection, or opening a vein to let out blood), hijamat (cupping, a process of
-                drawing blood to the surface of the body by using a glass cup or tube), and amat-e-kai (leeching, or
-                bleeding a person by using leeches). The essential function of all those regimens is to remove impure
-                blood or impurities from the body.
-
-                Surgical interventions, or ilaj-bil-yad, are a last resort. Their practice generally is beyond the realm
-                of the hakim’s expertise.</p>
-
-            <p>
-            <h2>Principles of Unani medicine</h2>
-            The history of Unani medicine can be characterized by the work of its practitioners, or hakims, who relied
-            on natural healing based on principles of harmony and balance, uniting the physical, mental, and spiritual
-            realms.</p>
-            <p>
-            <h2>Al-Umoor al-tabiyah: basic physiological principles</h2>
-            According to practitioners of Unani medicine, the health of the human body is maintained by the harmonious
-            arrangement of al-umoor al-tabiyah, the seven basic physiological principles of the Unani doctrine. These
-            principles include (1) arkan, or elements, (2) mizaj, or temperament, (3) akhlat, or bodily humours, (4)
-            aaza, or organs and systems, (5) arwah, or vital spirit, (6) quwa, or faculties or powers, and (7) afaal, or
-            functions. Interacting with each other, these seven natural components maintain the balance in the natural
-            constitution of the human body. Each individual’s constitution has a self-regulating capacity or power,
-            called tabiyat (or mudabbira-e-badan; vis medicatrix naturae in Latin), or to keep the seven components in
-            equilibrium.</p>
-
-            <p>
-            <h2>Arkan and mizaj: elements and temperament</h2>
-            As four simple, indivisible entities—arz (earth), maa (water), nar (fire), and hawa (air)—arkan not only
-            constitutes the primary components of the human body but also makes up all other creations in the universe.
-            There are predictable consequences to the actions and interactions (imtizaj) of the four arkan. As these
-            elements act upon and react with each other, they continually undergo change into various states of “genesis
-            and lysis” (generation and deterioration), due to ulfat-e-keemiyah (acceptance of a medicine by the body)
-            and nafarat-e-keemiyah (rejection of a medicine). Skilled hakims claim that they can perceive, recognize,
-            and observe such states.
-
-            The four essential mizaj (temperaments) are hot, cold, moist, and dry. Four more are compounded of those
-            single temperaments—namely, hot and dry, hot and moist, cold and dry, and cold and moist. Possessed in
-            different proportion, mizaj is balanced by all entities in the cosmos, including all plants, minerals, and
-            animals. The equilibrium of the individual’s elemental combination and resulting mizaj, as determined by
-            tabiyat, provides a stable constitution to that individual—in other words, health. Just as elemental balance
-            keeps an individual in a healthy state, changes in natural temperament cause the health of an individual to
-            suffer. Therefore, mizaj plays a pivotal role in Unani in characterizing a person’s normal state (physical,
-            mental, and social), as well as the nature of a disease.</p>
-
-            <p>
-            <h2>Doctrine of akhlat</h2>
-            Hippocrates propounded the doctrine of fluids, or humours, of the body, and he categorized the humours into
-            four groups based on their colour. These groups were refined by Galen and later by Avicenna. They appear in
-            Unani practice as dam (blood), balgham (phlegm), safra (yellow bile), and sauda (black bile). The human
-            dispositions corresponding to these humours are, respectively, sanguine, phlegmatic, choleric, and
-            melancholic. Each person is considered to have a specific humoral makeup, determined by the predominance of
-            a given humour in his or her constitution. The quality and quantity of the humours in an individual—a
-            person’s unique, proper, and proportionate humoral makeup—is said to guarantee health. Conditions other than
-            this balance signal ailment or disease.</p>
-
-            <h3>TO SPREAD AWARENESS ABOUT THE TRADITIONAL TREATMENT OF AYUSH, EXLPORE AYUSH MINISTRY THROUGH THE LINK
-            </h3>
-            <a href="https://www.ayush.gov.in/" target="_blank">
-                <h4>https://www.ayush.gov.in/</h4>
-            </a>
-            <img src="/ayush.png" alt="">
-        </div>
     </div>
-</body>
+  </nav>
 
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="mx-auto" style="max-width:900px;">
+        <div class="title">Unani Medicine</div>
+        <div class="sub">Greco-Arabic system of medicine — a tradition of balance, temperament, and natural therapies.</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="section-padding">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- main column -->
+        <div class="col-lg-8">
+          <article class="content">
+            <h2 class="text-primary-dark">Introduction & History</h2>
+            <p>Unani medicine (also called Unani tibb, Arabian medicine, or Islamic medicine) is a classical system of medicine with origins in the doctrines of ancient Greek physicians such as Hippocrates and Galen. The system was enriched and developed by Arab and Persian scholars — most notably Avicenna — and later spread across South Asia. Over centuries, healers (hakims) refined Unani with local medicinal plants and clinical experience.</p>
+
+            <h2 class="text-primary-dark">Modes of Treatment</h2>
+            <p>The Unani approach begins by restoring balance to external and internal factors — such as air, water, diet, and temperament — and strengthening the body's innate healing power (tabiyat). If lifestyle and regimen adjustments are insufficient, treatments include dietary therapy (ilaj-bi-ghiza), pharmacotherapy (ilaj-bi-dawa), and—less commonly—organotherapy (ilaj-bi-misla).</p>
+            <p>Unani pharmacopoeia is extensive; over two thousand remedies derived from herbs, minerals, and animal products are used singly or compounded to achieve the desired therapeutic effect. Classical preparation methods are still commonly employed to optimize potency and safety.</p>
+
+            <h2 class="text-primary-dark">Regimental Therapies (Tadabeer)</h2>
+            <p>Traditional regimens form an important part of Unani treatment and include practices intended to restore equilibrium in the body. Examples:</p>
+            <ul>
+              <li><strong>Dalak</strong> — therapeutic massage</li>
+              <li><strong>Hammam</strong> — therapeutic baths/sauna</li>
+              <li><strong>Karat</strong> — exercise and physical activity</li>
+              <li><strong>Fasd</strong> — venesection (therapeutic bloodletting)</li>
+              <li><strong>Hijamat</strong> — cupping therapy</li>
+              <li><strong>Amat-e-kai</strong> — leech therapy</li>
+            </ul>
+            <p>Surgical interventions (ilaj-bil-yad) are traditionally considered only when less invasive methods fail.</p>
+
+            <h2 class="text-primary-dark">Principles of Unani Medicine</h2>
+            <p>Unani medical thought emphasizes balance among several natural components. Central concepts include <em>arkan</em> (elements), <em>mizaj</em> (temperament), <em>akhlat</em> (humours), organs (<em>aaza</em>), vital spirit (<em>arwah</em>), faculties (<em>quwa</em>), and functions (<em>afaal</em>). Health arises when these elements remain in harmony and tabiyat (the body's self-regulating power) preserves equilibrium.</p>
+
+            <h3 class="mt-4">Elements, Temperament & Doctrine of Humours</h3>
+            <p>Unani’s four basic elements — earth, water, fire, and air — combine to produce temperaments (mizaj): hot, cold, moist, and dry, and compound temperaments such as hot-dry or cold-moist. The doctrine of humours (akhlat) describes blood (dam), phlegm (balgham), yellow bile (safra), and black bile (sauda); an individual's health depends on a proper balance of these humours.</p>
+
+            <h2 class="text-primary-dark">Modern Relevance & Research</h2>
+            <p>In the 20th century, figures like Indian physician Ajmal Khan and phytochemist Salimuzzaman Siddiqui advanced scientific research on Unani remedies, isolating pharmacologically active compounds (e.g., reserpine from Rauwolfia). Such work helped validate some traditional uses and opened paths for integration with modern pharmacology.</p>
+            <p>Organizations such as the Central Council for Research in Unani Medicine (CCRUM) and recognition by the World Health Organization have supported standardization, clinical trials, and safety evaluations, strengthening Unani’s role in contemporary traditional medicine research and practice.</p>
+          </article>
+        </div>
+
+        <!-- side column: facts + gallery -->
+        <aside class="col-lg-4">
+          <div class="mb-4 fact-box">
+            <h5 class="mb-2">Did you know?</h5>
+            <ul class="mb-0">
+              <li><strong>Greek roots:</strong> Unani draws heavily from Hippocrates and Galen.</li>
+              <li><strong>Avicenna’s influence:</strong> The Canon of Medicine shaped Unani practice for centuries.</li>
+              <li><strong>WHO recognition:</strong> Unani medicine received WHO attention in the 1970s.</li>
+              <li><strong>Phytochemical breakthroughs:</strong> Ajmal Khan and Salimuzzaman Siddiqui helped validate herbal compounds used in Unani.</li>
+            </ul>
+          </div>
+
+
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title text-primary-dark">Quick Links</h6>
+              <ul class="list-unstyled mb-0">
+                <li><a href="https://www.ayush.gov.in/" target="_blank">Ministry of AYUSH</a></li>
+                <li><a href="#" onclick="alert('Replace with CCRUM link')">CCRUM (research)</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="simplified-footer">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div class="mb-3 mb-md-0">
+        <a class="btn btn-outline-light btn-lg" href="/index.html"><i class="fas fa-arrow-left me-2"></i>Back to Home</a>
+      </div>
+      <div class="text-center">
+        <a href="https://www.ayush.gov.in/" target="_blank" class="d-inline-block mb-2 text-white fw-semibold">https://www.ayush.gov.in/</a>
+        <div><img src="/AYUSH/ayush.png" alt="AYUSH Logo" style="height:44px; filter:brightness(0) invert(1);"></div>
+      </div>
+      <div class="text-end text-muted small">
+        &copy; 2024 AYUSH Hospital Finder
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
